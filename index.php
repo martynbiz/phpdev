@@ -16,6 +16,4 @@ $dbAdapter = new framework\Db\DatabaseAdapter($config['database']);
 
 $userTable = new app\models\UserTable($dbAdapter);
 
-$user = $userTable->find(1);
-
-dump($user);
+$result = $serTable->create('invalid argument type');

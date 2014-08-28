@@ -35,5 +35,6 @@
         <var name="DB_DSN" value="mysql:host=localhost;dbname=phpdev_testing" />
         <var name="DB_USER" value="root" />
         <var name="DB_PASSWD" value="t1nth3p4rk" />
+        <var name="DB_NAME" value="phpdev_testing" />
     </php>
 </phpunit>
