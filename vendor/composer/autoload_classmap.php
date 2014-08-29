@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Controller' => $baseDir . '/framework/Controller.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/File/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/File/Iterator/Facade.php',
     'File_Iterator_Factory' => $vendorDir . '/phpunit/php-file-iterator/File/Iterator/Factory.php',
@@ -491,9 +490,11 @@ return array(
     'app\\Controller\\UserController' => $baseDir . '/app/Controller/UserController.php',
     'app\\models\\User' => $baseDir . '/app/Model/User.php',
     'app\\models\\UserTable' => $baseDir . '/app/Model/UserTable.php',
+    'framework\\Application' => $baseDir . '/framework/Application.php',
+    'framework\\Controller' => $baseDir . '/framework/Controller.php',
     'framework\\Db\\DatabaseAdapter' => $baseDir . '/framework/Db/DatabaseAdapter.php',
     'framework\\Db\\IDatabaseAdapter' => $baseDir . '/framework/Db/IDatabaseAdapter.php',
-    'framework\\Debug\\Debug' => $baseDir . '/framework/Debug/Debug.php',
+    'framework\\Debug' => $baseDir . '/framework/Debug.php',
     'framework\\Model\\RowGateway' => $baseDir . '/framework/Model/RowGateway.php',
     'framework\\Model\\TableGateway' => $baseDir . '/framework/Model/TableGateway.php',
 );

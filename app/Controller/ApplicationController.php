@@ -2,6 +2,8 @@
 
 namespace app\Controller;
 
+use framework\Controller;
+
 /**
 * ApplicationController
 *    
