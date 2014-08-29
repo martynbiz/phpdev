@@ -2,6 +2,8 @@
 
 namespace app\Controller;
 
+use app\Model\UserTable;
+
 /**
 * UserController
 *    
@@ -18,10 +20,10 @@ class UserController extends ApplicationController
     */
     public function login()
     {
-        echo 'Yatta!';
+        $userTable = new UserTable;
         
-        /*$this->renderView('user/login', {
-            'color' => 'blue'
-        })*/
+        $this->view('user/login', array(
+            'id' => 12,
+        ));
     }
 }

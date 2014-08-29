@@ -16,7 +16,7 @@ class Application
     * desc
     *    
     */
-    static public function init($config)
+    static public function init($config, $appBase)
     {
         if(isset($_REQUEST['url'])) {
             
@@ -24,22 +24,22 @@ class Application
             $q = explode('/', $_REQUEST['url']);
             
             $controller = 'app\Controller\\' . ucfirst(array_shift($q)) . 'Controller';
-            $controller = new $controller;
+            $controller = new $controller($appBase);
             
             // set the controller, action and arguments
             $action = (count($q)) ? array_shift($q) : 'index';
-            $arguments = (count($q)) ? $q : array();
+            $params = (count($q)) ? $q : array();
         } else {
             
             $default = $config['routes']['default'];
             
             // call the default method
             $controller = 'app\Controller\\' . ucfirst($default['controller']) . 'Controller';
-            $controller = new $controller;
+            $controller = new $controller($appBase);
             $action = $default['action'];
-            $arguments = array();
+            $params = array();
         }
 
-        call_user_func_array(array($controller, $action), $arguments);
+        call_user_func_array(array($controller, $action), $params);
     }
 }

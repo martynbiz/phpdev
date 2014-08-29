@@ -1,11 +1,7 @@
 <?php
 
 return array(
-    'database' => array(
-        'dsn' => 'mysql:host=localhost;dbname=budgetz',
-        'user' => 'root',
-        'password' => 't1nth3p4rk',
-    ),
+    'database' => require 'database.config.php',
     'routes' => array(
         'default' => array(
             'controller' => 'user',

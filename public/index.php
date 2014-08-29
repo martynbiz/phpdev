@@ -6,4 +6,4 @@ define('APPLICATION_PATH', realpath(__DIR__ . '/../app'));
 
 $config = require APPLICATION_PATH . '/config/application.config.php';
 
-framework\Application::init($config);
+framework\Application::init($config, APPLICATION_PATH);
