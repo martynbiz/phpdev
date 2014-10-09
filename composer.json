@@ -2,11 +2,15 @@
     "autoload": {
         "classmap": [
             "app",
-            "framework"
+            "vendor/martynbiz/caledonia"
         ]
     }, 
     "require-dev": {
         "phpunit/phpunit": "4.1.*",
         "phpunit/dbunit": ">=1.2"
+    },
+    "require": {
+        "illuminate/database": "*",
+        "robmorgan/phinx": "*"
     }
 }

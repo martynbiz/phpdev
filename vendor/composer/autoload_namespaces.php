@@ -7,4 +7,14 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
+    'Symfony\\Component\\Filesystem\\' => array($vendorDir . '/symfony/filesystem'),
+    'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
+    'Symfony\\Component\\Config\\' => array($vendorDir . '/symfony/config'),
+    'Symfony\\Component\\ClassLoader\\' => array($vendorDir . '/symfony/class-loader'),
+    'Phinx' => array($vendorDir . '/robmorgan/phinx/src'),
+    'Illuminate\\Support' => array($vendorDir . '/illuminate/support'),
+    'Illuminate\\Events' => array($vendorDir . '/illuminate/events'),
+    'Illuminate\\Database' => array($vendorDir . '/illuminate/database'),
+    'Illuminate\\Container' => array($vendorDir . '/illuminate/container'),
+    'Carbon' => array($vendorDir . '/nesbot/carbon/src'),
 );
