@@ -31,16 +31,18 @@ foreach($configDirs as $dir) {
 // BOOTSTRAP
 // Bootstrap file where we'll put everything to get up and running
 
+$dbConfig = $config['database'];
+
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 $capsule = new Capsule;
 
 $capsule->addConnection([
-    'driver'    => 'mysql',
-    'host'      => 'localhost',
-    'database'  => 'phpdev_development',
-    'username'  => 'root',
-    'password'  => 't1nth3p4rk',
+    'driver'    => $dbConfig['driver'],
+    'host'      => $dbConfig['host'],
+    'database'  => $dbConfig['database'],
+    'username'  => $dbConfig['username'],
+    'password'  => $dbConfig['password'],
     'charset'   => 'utf8',
     'collation' => 'utf8_unicode_ci',
     'prefix'    => '',
