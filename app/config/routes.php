@@ -2,32 +2,24 @@
 
 return array(
     'routes' => array(
-        'posts' => array(
-            'default' => array(
-                'controller' => 'user',
-                'action' => 'login'
+        'match' => array(
+            'articles' => array(
+                'controller' => 'posts',
+                'action' => 'index',
             ),
-        )
-        
-    ),
-    
-    /*// The following section is new and should be added to your file
-    'router' => array(
-        'routes' => array(
-            'album' => array(
-                'type'    => 'segment',
-                'options' => array(
-                    'route'    => '/album[/:action][/:id]',
-                    'constraints' => array(
-                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                        'id'     => '[0-9]+',
-                    ),
-                    'defaults' => array(
-                        'controller' => 'Album\Controller\Album',
-                        'action'     => 'index',
-                    ),
-                ),
+            'articles/top5' => array(
+                'controller' => 'posts',
+                'action' => 'recent',
+                'params' => array(5)
             ),
         ),
-    ),*/
+        'resources' => array(
+            'posts',
+            'users',
+        ),
+        'default' => array(
+            'controller' => 'user',
+            'action' => 'login',
+        ),
+    ),
 );

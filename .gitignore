@@ -1,6 +1,7 @@
 database.php
 phinx.yml
 vendor/*
+!vendor/martynbiz/*
 
 *~
 *.swp
