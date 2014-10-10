@@ -1,3 +1,7 @@
 database.php
 phinx.yml
 vendor/*
+
+*~
+*.swp
+*.swo

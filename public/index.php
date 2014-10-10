@@ -2,6 +2,8 @@
 
 require_once '../vendor/autoload.php';
 
+use Caledonia\Application;
+
 define('APPLICATION_PATH', realpath(__DIR__ . '/../app'));
 
 $env = getenv('APPLICATION_ENV') ?: 'production';
@@ -11,20 +13,16 @@ $env = getenv('APPLICATION_ENV') ?: 'production';
 // set configuration values. First set globals, then overwrite with environment config.
 // Note: remember trailing slash on the end of the directory names
 
-$config = array();
-$configDirs = array(
+// move this lot into something like 
+
+$config = Application::getConfig(array(
     APPLICATION_PATH . '/config/', // global configuration (should come first)
     APPLICATION_PATH . '/config/' . $env . '/', // environment configuration
-);
+));
 
-foreach($configDirs as $dir) {
-    if (is_dir($dir)) {
-        foreach (new DirectoryIterator($dir) as $fileInfo) {
-            if($fileInfo->isDot() or $fileInfo->isDir()) continue;
-            $config = array_merge($config, require($dir . $fileInfo->getFilename()));
-        }
-    }
-}
+
+
+
 
 
 
@@ -58,4 +56,4 @@ $capsule->bootEloquent();
 
 // RUN
 
-Caledonia\Application::init($config, APPLICATION_PATH);
+Application::init($config, APPLICATION_PATH);
