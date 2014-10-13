@@ -5,7 +5,7 @@ namespace app\Controller;
 use app\Model\Post;
 
 /**
-* UserController
+* PostsController
 *    
 * desc
 *    
@@ -14,7 +14,7 @@ class PostsController extends ApplicationController
 {
     /**
     * indexAction
-    *    
+    * 
     * List all posts
     *    
     */

@@ -2,7 +2,7 @@
 
 namespace app\Controller;
 
-use app\Model\UserTable;
+use app\Model\User;
 
 /**
 * UserController
@@ -10,7 +10,7 @@ use app\Model\UserTable;
 * desc
 *    
 */
-class UserController extends ApplicationController
+class UsersController extends ApplicationController
 {
     /**
     * login
@@ -18,10 +18,12 @@ class UserController extends ApplicationController
     * desc
     *    
     */
-    public function login()
+    public function loginAction()
     {
-        $this->view('user/login', array(
-            'id' => 12,
+        $user = User::find(1)->toArray();
+        
+        $this->view('users/login', array(
+            'user' => $user,
         ));
     }
 }

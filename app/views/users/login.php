@@ -1,1 +1,1 @@
-user/login view <?php echo $params['id'] ?>
+user/login view <?php var_export($params); ?>

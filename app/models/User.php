@@ -5,12 +5,12 @@ namespace app\Model;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
-* Post
+* User
 *    
 * Model class for posts table
 *    
 */
-class Post extends Eloquent
+class User extends Eloquent
 {
     
 }

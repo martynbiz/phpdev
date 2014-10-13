@@ -18,8 +18,8 @@ return array(
             'users',
         ),
         'default' => array(
-            'controller' => 'user',
-            'action' => 'login',
+            'controller' => 'posts',
+            'action' => 'index',
         ),
     ),
 );
